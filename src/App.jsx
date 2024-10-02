@@ -49,8 +49,9 @@ export default function App() {
 
   return (
     <>
+      <h1 className="header">Create your custom Todo List</h1>
       <NewTodoForm addTodo={addTodo} />
-      <h1 className="header">Todo List</h1>
+      <h2 className="header">Todo List</h2>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   )

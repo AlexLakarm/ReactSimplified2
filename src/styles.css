@@ -1,15 +1,33 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
 body {
   background: #333;
-  color: hsl(200, 100%, 90%);
+  color: #eee;
   max-width: 400px;
   padding: 1rem;
   margin: 0 auto;
 }
+
+h1 {
+  text-align: center;
+  font-size: 150px;
+  text-transform: capitalize;
+  background: linear-gradient(-45deg, #eeaa52, #e73c6f, #2394d5);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+}
+
+h2 {
+  font-size: 20px;
+  background: linear-gradient(-15deg, white, #e73c6f, rgb(88, 39, 47), white);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 2px transparent;
+}
+
 
 .new-item-form {
   display: flex;
@@ -24,29 +42,33 @@ body {
 }
 
 .btn {
-  background: hsl(200, 100%, 50%, 0.1);
+  background: linear-gradient(135deg, #00b4db, #0083b0);
   border: 1px solid hsl(200, 100%, 50%);
-  color: hsl(200, 100%, 50%);
+  color: hsl(0, 0%, 0%);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-.btn:hover,
-.btn:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
+.btn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  /* Ajoute un effet de lumière pour un effet de brillance */
 }
 
-.btn.btn-danger {
-  background: hsl(0, 100%, 40%, 0.1);
-  border: 1px solid hsl(0, 100%, 40%);
-  color: hsl(0, 100%, 40%);
+.btn-danger {
+  background: linear-gradient(135deg, black, #e53935, 0.1);
+  border: 5px solid linear-gradient(135deg, black, #e53935);
+  color: hsl(0, 0%, 0%);
+  transition: background 0.3s ease;
 }
 
-.btn.btn-danger:hover,
-.btn.btn-danger:focus-visible {
-  background: hsl(0, 100%, 40%, 0.2);
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ff6b6b, #e53935, 0.2);
+  box-shadow: 0 0 20px rgba(1, 0, 0, 0.2);
+  /* Ajoute un effet de lumière pour un effet de brillance */
 }
 
 .new-item-form input {
@@ -63,9 +85,10 @@ body {
 }
 
 .header {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .list {
