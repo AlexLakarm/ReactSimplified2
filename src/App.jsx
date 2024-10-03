@@ -3,6 +3,8 @@ import "./styles.css"
 import { NewTodoForm } from "./NewTodoFrom"
 import { TodoList } from "./TodoList"
 import { useEffect } from "react"
+import { Footer } from "./Footer"
+
 export default function App() {
 
   const [todos, setTodos] = useState(() => {
@@ -41,11 +43,6 @@ export default function App() {
     })
   }
 
-  function handleDelete(id) {
-    setTodos(currentTodos => {
-      return currentTodos.filter(todo => todo.id !== id)
-    })
-  }
 
   return (
     <>
@@ -53,6 +50,7 @@ export default function App() {
       <NewTodoForm addTodo={addTodo} />
       <h2 className="header">Todo List</h2>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <Footer />
     </>
   )
 }
